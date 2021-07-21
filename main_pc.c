@@ -14,7 +14,6 @@
 #include <termios.h>
 
 
-#define off64_t __off64_t
 unsigned char* readFile(const char* name, UInt32* lenP){
 
 	long len = 0;
