@@ -176,7 +176,7 @@ int main(int argc, char** argv){
 		cfg = old;
 		if(ret) perror("cannot get term attrs");
 		
-		#ifndef _DARWIN_
+		#ifndef __APPLE__
 		
 			cfg.c_iflag &=~ (INLCR | INPCK | ISTRIP | IUCLC | IXANY | IXOFF | IXON);
 			cfg.c_oflag &=~ (OPOST | OLCUC | ONLCR | OCRNL | ONOCR | ONLRET);

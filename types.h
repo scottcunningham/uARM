@@ -42,5 +42,12 @@ void __mem_copy(void* d, const void* s, UInt32 sz);
 #define memset __memset_disabled__
 #define memcpy __memcpy_disabled__
 
+#ifdef __APPLE__
+#define off64_t off_t
+#define fopen64 fopen
+#define ftello64 ftello
+#define fseeko64 fseeko
+#endif
+
 #endif
 
